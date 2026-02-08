@@ -1,0 +1,21 @@
+[Unit]
+Description=Friday Voice Bridge (HA → OpenClaw)
+After=network.target
+
+[Service]
+Type=simple
+WorkingDirectory=/home/bret/git/friday-voice
+ExecStart=/usr/bin/node src/server.js
+Restart=on-failure
+RestartSec=5
+
+# Load environment from file
+EnvironmentFile=/home/bret/.config/friday-voice/env
+
+# Logging
+StandardOutput=journal
+StandardError=journal
+SyslogIdentifier=friday-voice
+
+[Install]
+WantedBy=default.target
