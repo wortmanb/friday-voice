@@ -23,7 +23,7 @@
   "author": "Friday (via nightly build)",
   "license": "MIT",
   "dependencies": {
-    "@anthropic-ai/sdk": "^0.39.0",
+    "@anthropic-ai/sdk": "^0.124.0",
     "express": "^4.21.0"
   }
 }
